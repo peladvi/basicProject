@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic World of Coding</title>
+    <style>
+      body {
+        font-family: "Amatic SC", cursive;
+        background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+      }
+
+      h1 {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 40px;
+        max-width: 600px;
+        padding: 25px;
+      }
+
+      h2 {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        max-width: 600px;
+        font-size: 25px;
+      }
+
+      p {
+        text-align: center;
+        display: block;
+        font-size: 20px;
+        font-weight: bolder;
+        display: block;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 15px;
+      }
+
+      button {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: "Amatic SC", cursive;
+        border-radius: 10px;
+        box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+        cursor: pointer;
+        background: linear-gradient(to right, #434343 0%, black 100%);
+        color: white;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: white;
+        color: black;
+      }
+
+      ul {
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .gryffindor {
+        padding: 20px;
+        border: 2px solid #606470;
+        border-radius: 4px;
+        margin-right: 8px;
+        width: 170px;
+        transition: all 300ms ease-in-out;
+        background: #a21232;
+      }
+
+      .gryffindor:hover {
+        background: none;
+      }
+
+      .slytherin {
+        padding: 20px;
+        border: 2px solid #606470;
+        border-radius: 4px;
+        margin-left: 8px;
+        width: 170px;
+        transition: all 300ms ease-in-out;
+        background: #004445;
+      }
+      .slytherin:hover {
+        background: none;
+      }
+
+      .hufflepuff {
+        padding: 20px;
+        border: 2px solid #606470;
+        border-radius: 4px;
+        margin-right: 8px;
+        width: 170px;
+        transition: all 300ms ease-in-out;
+        background: #f1b963;
+      }
+
+      .hufflepuff:hover {
+        background: none;
+      }
+
+      .ravenclaw {
+        padding: 20px;
+        border: 2px solid #606470;
+        border-radius: 4px;
+        margin-left: 8px;
+        width: 170px;
+        transition: all 300ms ease-in-out;
+        background: #24527a;
+      }
+
+      .ravenclaw:hover {
+        background: none;
+      }
+
+      a {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        text-decoration: none;
+        color: black;
+      }
+
+      .wizardingWorld {
+        text-decoration: underline;
+        color: black;
+        font-size: 18px;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 15px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Island+Moments&family=Moon+Dance&family=Tangerine:wght@700&family=The+Nautigal:wght@700&display=swap"
+    rel="stylesheet"
+  />
+
+  <body>
+    <h1>Magic World of Coding</h1>
+    <h2>
+      Welcome to the amazing world of coding where everything is possible!
+    </h2>
+    <p>
+      With some magic spells you can create anything. Click on the button to
+      find out what your magic code is.
+    </p>
+    <button>Discover your spell</button>
+    <ul>
+      <img
+        class="gryffindor"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/830/original/Gryffindor_ClearBG.png?1642108399"
+      />
+
+      <img
+        class="slytherin"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/831/original/Slytherin_ClearBG.png?1642108431"
+      />
+    </ul>
+    <ul>
+      <img
+        class="hufflepuff"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/834/original/Hufflepuff_ClearBG.png?1642108471"
+      />
+
+      <img
+        class="ravenclaw"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/838/original/RavenclawCrest.png?1642108501"
+      />
+    </ul>
+
+    <a href="https://www.wizardingworld.com/" target="blank">
+      Find more on <span class="wizardingWorld"> Wizarding World </span></a
+    >
+    <div class="footer">This page was built by Paula Ladwiniec</div>
+
+    <script>
+      function discover() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you");
+        let h1 = document.querySelector("h1");
+
+        if (age <= 20 || age >= 80) {
+          h1.innerHTML =
+            name +
+            ", you are from Ravenclaw and your spell is <em> <strong> Lumos! </em> </strong> Use it to lighten up your code.";
+        }
+
+        if (age > 20 && age <= 40) {
+          h1.innerHTML =
+            name +
+            ", you are from Gryffindor and your spell is <em> <strong> Expecto Patronum! </em> </strong> That's a mark of advanced magic.";
+        }
+
+        if (age > 40 && age <= 65) {
+          h1.innerHTML =
+            name +
+            ", you are from Slytherin and your spell is <em> <strong> Expelliarmus! </em> </strong> You can easily remove any bugs.";
+        } else {
+          if (age > 65 && age < 80) {
+            h1.innerHTML =
+              name +
+              ", you are from Hufflepuff and your spell is <em> <strong> Flipendo! </em> </strong> Use it to activate some hidden magical switches.";
+          }
+        }
+      }
+
+      let discoverButton = document.querySelector("button");
+      discoverButton.addEventListener("click", discover);
+    </script>
+  </body>
+</html>
