@@ -209,7 +209,7 @@
           h1.innerHTML =
             name +
             ", you are from Ravenclaw and your spell is <strong> Lumos! </strong> Use it to lighten up your code.";
-
+          intro.innerHTML = "";
           spell.scrollIntoView();
         }
 
@@ -225,12 +225,14 @@
           h1.innerHTML =
             name +
             ", you are from Slytherin and your spell is <strong> Expelliarmus! </strong> You can easily remove any bugs.";
+          intro.innerHTML = "";
           spell.scrollIntoView();
         } else {
           if (age > 65 && age < 80) {
             h1.innerHTML =
               name +
               ", you are from Hufflepuff and your spell is <strong> Flipendo! </strong> Use it to activate some hidden magical switches.";
+            intro.innerHTML = "";
             spell.scrollIntoView();
           }
         }
