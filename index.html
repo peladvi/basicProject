@@ -157,18 +157,21 @@
   />
 
   <body>
-    <h1>Magic World of Coding</h1>
-    <h2>
-      Welcome to the amazing world of coding where everything is possible!
-    </h2>
-    <p>
-      With some magic spells you can create anything. Click on the button to
-      find out what your magic code is.
-    </p>
+    <h1 id="spell">Magic World of Coding</h1>
+    <div class="intro">
+      <h2>
+        Welcome to the amazing world of coding where everything is possible!
+      </h2>
+      <p>
+        With some magic spells you can create anything. Click on the button to
+        find out what your magic code is.
+      </p>
+    </div>
     <button>Discover your spell</button>
     <div class="first-row">
       <img
         class="gryffindor img-fluid"
+        id="gryffindor"
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/830/original/Gryffindor_ClearBG.png?1642108399"
       />
 
@@ -199,28 +202,36 @@
         let name = prompt("What is your name?");
         let age = prompt("How old are you");
         let h1 = document.querySelector("h1");
+        let intro = document.querySelector(".intro");
+        let spell = document.getElementById("spell");
 
         if (age <= 20 || age >= 80) {
           h1.innerHTML =
             name +
             ", you are from Ravenclaw and your spell is <strong> Lumos! </strong> Use it to lighten up your code.";
+
+          spell.scrollIntoView();
         }
 
         if (age > 20 && age <= 40) {
           h1.innerHTML =
             name +
             ", you are from Gryffindor and your spell is <strong> Expecto Patronum! </strong> That's a mark of advanced magic.";
+          intro.innerHTML = "";
+          spell.scrollIntoView();
         }
 
         if (age > 40 && age <= 65) {
           h1.innerHTML =
             name +
             ", you are from Slytherin and your spell is <strong> Expelliarmus! </strong> You can easily remove any bugs.";
+          spell.scrollIntoView();
         } else {
           if (age > 65 && age < 80) {
             h1.innerHTML =
               name +
               ", you are from Hufflepuff and your spell is <strong> Flipendo! </strong> Use it to activate some hidden magical switches.";
+            spell.scrollIntoView();
           }
         }
       }
