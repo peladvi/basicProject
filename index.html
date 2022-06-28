@@ -227,13 +227,17 @@
             ", you are from Slytherin and your spell is <strong> Expelliarmus! </strong> You can easily remove any bugs.";
           intro.innerHTML = "";
           spell.scrollIntoView();
+        }
+        if (age > 65 && age < 80) {
+          h1.innerHTML =
+            name +
+            ", you are from Hufflepuff and your spell is <strong> Flipendo! </strong> Use it to activate some hidden magical switches.";
+          intro.innerHTML = "";
+          spell.scrollIntoView();
         } else {
-          if (age > 65 && age < 80) {
+          if (name === "" || age === null) {
             h1.innerHTML =
-              name +
-              ", you are from Hufflepuff and your spell is <strong> Flipendo! </strong> Use it to activate some hidden magical switches.";
-            intro.innerHTML = "";
-            spell.scrollIntoView();
+              "Oooops, something went wrong! Click on the button and type in your name and age to discover your spell";
           }
         }
       }
